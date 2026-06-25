@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Sidebar Styles */
+.ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-menu .ant-menu-item {
+  margin: 8px 0 !important;
+  border-radius: 12px !important;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-menu .ant-menu-item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 4px;
+  background: transparent;
+  border-radius: 0 4px 4px 0;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu .ant-menu-item-selected {
+  background: linear-gradient(90deg, rgba(24, 144, 255, 0.15), rgba(24, 144, 255, 0.05)) !important;
+  color: #1890ff !important;
+  font-weight: 600 !important;
+}
+
+.dark .sidebar-menu .ant-menu-item-selected {
+  background: linear-gradient(90deg, rgba(24, 144, 255, 0.25), rgba(24, 144, 255, 0.05)) !important;
+  color: #69b1ff !important;
+}
+
+.sidebar-menu .ant-menu-item-selected::before {
+  background: #1890ff;
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass-panel {
+  background: rgba(17, 24, 39, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
